@@ -4,11 +4,11 @@ This is my test repository where I learn new languages.
 
 ## how to push changes
 
-> git add <FILE> <FOLDER>
+> git add \<FILE\> \<FOLDER\>
 > 
-> git commit -m <MESSAGE>
+> git commit -m \<MESSAGE\>
 > 
-> git push -u origin <BRANCH>
+> git push -u origin \<BRANCH\>
 
 ## git commands
 
