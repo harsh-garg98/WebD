@@ -48,13 +48,13 @@ DROP TABLE IF EXISTS mywords;
 CREATE TABLE mywords
 SELECT *
 FROM wordle
--- WHERE
---     ca > 0 AND
---     cr = 0 AND
---     co = 0 AND
---     cs = 0 AND
---     ce = 0 AND
---     c1 <> 'a'
+WHERE
+    ca = 0 AND
+    cr = 0 AND
+    co > 0 AND
+    cs = 0 AND
+    ce = 0 AND
+    c3 <> 'o'
     ;
 
 DROP TABLE IF EXISTS freq;
@@ -91,4 +91,10 @@ INSERT INTO freq SELECT 'y', SUM(cy) FROM mywords;
 INSERT INTO freq SELECT 'z', SUM(cz) FROM mywords;
 
 SELECT * FROM freq ORDER BY total DESC;
-SELECT word FROM mywords ORDER BY (ca>0)+(cr>0)+(co>0)+(cs>0)+(ce>0) DESC LIMIT 5;
+
+SELECT w.word, SUM(f.total) AS `weight`
+FROM mywords w, freq f
+WHERE w.c1 = f.ch OR w.c2 = f.ch OR w.c3 = f.ch OR w.c4 = f.ch OR w.c5 = f.ch
+GROUP BY w.word
+ORDER BY SUM(f.total) DESC
+LIMIT 5;
