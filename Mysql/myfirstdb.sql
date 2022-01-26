@@ -19,5 +19,5 @@ SELECT * FROM emp;
 -- failed insert
 INSERT INTO emp VALUES
     (1, "ashu", 99);
-SELECT * FROM emp;
+SELECT * FROM emp E;
 
