@@ -54,7 +54,15 @@ WHERE
     co > 0 AND
     cs = 0 AND
     ce = 0 AND
-    c3 <> 'o'
+    c3 <> 'o' AND
+    ct > 0 AND
+    co > 0 AND
+    cn > 0 AND
+    ci = 0 AND
+    cc = 0 AND
+    c1 <> 't' AND
+    c2 = 'o' AND
+    c3 <> 'n'
     ;
 
 DROP TABLE IF EXISTS freq;
