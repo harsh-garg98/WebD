@@ -49,20 +49,12 @@ CREATE TABLE mywords
 SELECT *
 FROM wordle
 WHERE
+    cr > 0 AND
     ca = 0 AND
-    cr = 0 AND
-    co > 0 AND
-    cs = 0 AND
-    ce = 0 AND
-    c3 <> 'o' AND
-    ct > 0 AND
-    co > 0 AND
-    cn > 0 AND
+    cd = 0 AND
     ci = 0 AND
-    cc = 0 AND
-    c1 <> 't' AND
-    c2 = 'o' AND
-    c3 <> 'n'
+    co = 0 AND
+    c1 <> 'r'
     ;
 
 DROP TABLE IF EXISTS freq;
