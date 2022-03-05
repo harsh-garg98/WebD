@@ -1,0 +1,171 @@
+#main{
+    background-color: #07004c;
+    width: 1400px;
+    margin-left: 20px;
+}
+
+#header{
+    text-align:center;
+    /* background-color: #ffdf32; */
+    background-color: #07004c;
+    /* background-color: #b7b7b7; */
+    
+  }
+  
+  .name{
+    text-align:center;
+    padding-top: 40px;
+    /* color: #ffdf32; */
+    color: white;
+  /*   color: #b7b7b7; */
+  }
+  
+  #small-text{
+    /* color: #ffdf32;
+     */
+    color: white;
+  /*   color: #b7b7b7; */
+  }
+
+  #image-background{
+    background-color: #ffdf32;
+    height: 656px;
+    width: 1200px;
+    margin-left: 100px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: -5px;
+  }
+
+  #jotaro-image{
+      height:550px;
+      width: 1100px;
+      margin-top: 60px;
+      margin-bottom: 10px;
+  }
+
+  #caption{
+      display: block;
+      font-size: 20px;
+  }
+
+  .brief{
+      margin-left: 100px;
+      width: 1200px;
+  }
+  
+  #first-container{
+    display: flex;
+  }
+
+  #nav{
+      display: flex;
+      width: 550px;
+      height: 950px;
+      background-color: #ffdf32;
+      margin-left: 95px;
+      margin-right: 25px;
+      border-radius: 2%;
+      border-style: groove;
+      border-color: black;
+      border-width: 10px;
+      text-align: center;
+      flex-direction: column;
+  }
+
+  ol{
+      counter-reset: item;
+      text-align: left;
+  }
+
+  ol li{
+      display: block;
+      padding-bottom: 5px;
+  }
+
+  ol li ol{
+    display: block;
+    padding-top: 5px;
+}
+
+  ol li ol li{
+    display: block;
+    padding-bottom: 5px;
+}
+
+  ol li:before{
+      content: counters(item, ".") " "; 
+      counter-increment: item;
+  }
+
+  ul li span{
+    position: relative;
+    /* left: -140px; */
+  }
+
+  #character-details{
+      width: 550px;
+      height: 950px;
+      margin-left: 30px;
+      background-color: pink;
+      border-radius: 2%;
+      border-style: groove;
+      border-color: black;
+      border-width: 10px;
+  }
+
+  #jotaro-image-caption{
+      height: 645px;
+      width: 100%;
+      background-color: black;
+      text-align: center;
+  }
+
+  #jotaro-manga-pic{
+      width:545px;
+      height: 600px;
+      border-radius: 1%;
+  }
+
+  .caption{
+      background-color: black;
+      color: white;
+      display: block;
+      margin-top: 10px;
+  }
+
+  .info-hierarchy{
+    display: flex;
+    width: 100%;
+    height:50px;
+}
+
+  .text-header-box{
+      width: 31%;
+      height:100%;
+      background-color: #b7b7b7;
+      border-style: groove;
+      border-color: black;
+      border-width: 3px;
+      display: block;
+  }
+
+  .text-info-box{
+    width: 69%;
+    height:100%;
+    background-color: #ffdf32;
+    border-style: groove;
+    border-color: black;
+    border-width: 3px;
+    display: block;
+    line-height: 10%;
+    text-align: left;
+}
+
+ul li{
+    padding-bottom: 15px;
+    /* text-align: justify; */
+    /* padding-left: 145px; */
+}

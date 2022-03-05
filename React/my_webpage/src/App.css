@@ -1,0 +1,140 @@
+@font-face {
+  font-family: raleway_italic;
+  src: url('./components/Raleway/static/Raleway-Italic.ttf');
+}
+
+@font-face {
+  font-family: raleway;
+  src: url('./components/Raleway/static/Raleway-Regular.ttf');
+}
+
+@font-face {
+  font-family: lora;
+  src: url('./components/Lora/static/Lora-Regular.ttf');
+}
+
+@font-face {
+  font-family: inter;
+  src: url('./components/Inter/static/Inter-Regular.ttf');
+}
+
+@font-face {
+  font-family: open_sans_condensed;
+  src: url('./components/Open_Sans_Condensed/OpenSansCondensed-Light.ttf');
+}
+
+@font-face {
+  font-family: work_sans;
+  src: url('./components/Work_Sans/static/WorkSans-Black.ttf');
+}
+
+body{
+  background-color:#FAF9F6;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.app-header {
+  background-image: url('./components/blur.jpeg');
+  background-attachment: fixed;
+  /* background-color: #282c34; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  margin-bottom: 11vh;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.header-first-sentence {
+  color: white;
+  margin-top:10px;
+  margin-bottom:10px;
+  font-style: italic;
+  font-weight:3000;
+  font-family: raleway_italic;
+}
+
+.header-second-sentence {
+  color: #FFFFFF;
+  margin-top:10px;
+  margin-bottom:10px;
+  word-spacing: -50%;
+  font-family: inter;
+}
+
+.my-journey {
+  color: black;
+  margin-top:00px;
+  margin-bottom:10px;
+  font-family: work-sans;
+}
+
+.my-journey::before {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 2px;
+  background: black;
+  left: 36.75%;
+  top: 113.2%;
+  position: absolute;
+}
+
+.my-journey::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 2px;
+  background: black;
+  right: 36.75%;
+  top: 113.2%;
+  position: absolute;
+}
+
+.image-and-details{
+  display: flex;
+  flex-direction: row;
+}
+
+.journey-image{
+  height: 115px;
+  width: 135px;
+  border-radius: 15%;
+  
+}
+
+.company-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+}
