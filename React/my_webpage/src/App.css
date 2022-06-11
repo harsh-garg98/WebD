@@ -1,31 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+
 @font-face {
   font-family: raleway_italic;
-  src: url('./components/Raleway/static/Raleway-Italic.ttf');
+  src: url('./components/Fonts/Raleway/static/Raleway-Italic.ttf');
 }
 
 @font-face {
   font-family: raleway;
-  src: url('./components/Raleway/static/Raleway-Regular.ttf');
+  src: url('./components/Fonts/Raleway/static/Raleway-Regular.ttf');
 }
 
 @font-face {
   font-family: lora;
-  src: url('./components/Lora/static/Lora-Regular.ttf');
+  src: url('./components/Fonts/Lora/static/Lora-Regular.ttf');
 }
 
 @font-face {
   font-family: inter;
-  src: url('./components/Inter/static/Inter-Regular.ttf');
+  src: url('./components/Fonts/Inter/static/Inter-Regular.ttf');
 }
 
 @font-face {
   font-family: open_sans_condensed;
-  src: url('./components/Open_Sans_Condensed/OpenSansCondensed-Light.ttf');
+  src: url('./components/Fonts/Open_Sans_Condensed/OpenSansCondensed-Light.ttf');
 }
 
 @font-face {
   font-family: work_sans;
-  src: url('./components/Work_Sans/static/WorkSans-Black.ttf');
+  src: url('./components/Fonts/Work_Sans/static/WorkSans-Black.ttf');
 }
 
 body{
@@ -47,18 +49,24 @@ body{
   }
 }
 
+#body-start{
+  margin-top: 55px;
+  height: calc(100vh - 55px);
+  /* overflow-y:scroll; */
+}
+
 .app-header {
-  background-image: url('./components/blur.jpeg');
+  /* background-image: url('./components/Images/blur.jpeg'); */
   background-attachment: fixed;
-  /* background-color: #282c34; */
-  min-height: 100vh;
+  /* background-color: black; */
+  min-height: calc(100vh - 50px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  margin-bottom: 11vh;
+  /* margin-bottom: 10vh; */
 }
 
 .App-link {
@@ -91,44 +99,60 @@ body{
   font-family: inter;
 }
 
-.my-journey {
-  color: black;
+.major-container{
+  padding-top: 7.5vh;
+  padding-bottom: 5vh;
+}
+
+.section-heading-black{
   margin-top:00px;
-  margin-bottom:10px;
+  margin-bottom:25px;
   font-family: work-sans;
 }
 
-.my-journey::before {
-  content: '';
-  display: block;
-  width: 100px;
+.section-heading-black:before,
+.section-heading-black:after {
+  background-color: black;
+  content: "";
+  display: inline-block;
   height: 2px;
-  background: black;
-  left: 36.75%;
-  top: 113.2%;
-  position: absolute;
+  position: relative;
+  vertical-align: middle;
+  width: 7.5%;
 }
 
-.my-journey::after {
-  content: '';
-  display: block;
-  width: 100px;
-  height: 2px;
-  background: black;
-  right: 36.75%;
-  top: 113.2%;
-  position: absolute;
+.section-heading-black:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.section-heading-black:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+#journey{
+  color: black;
 }
 
 .image-and-details{
   display: flex;
+  /* flex-direction: row;
+  margin-top: 50px;
+  margin-left: 30vh; */
+  padding-top: 40px;
+}
+
+.image{
   flex-direction: row;
+  margin-top: 25px;
+  margin-left: 35vh;
 }
 
 .journey-image{
-  height: 115px;
-  width: 135px;
-  border-radius: 15%;
+  height: 150px;
+  width: 150px;
+  border-radius: 10%;
   
 }
 
@@ -136,5 +160,103 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 10px;
+    margin-left: 50px;
+    padding-top: 20px;
+    text-align: left;
+}
+
+.company{
+  font-family: inter;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.role{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.location{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#thoughts{
+  /* background-image: url('./components/Images/blur2.webp'); */
+  /* height: 100vh; */
+  color: black;
+}
+
+#portfolio{
+  /* background-image: url('./components/Images/blur2.webp'); */
+  /* height: 100vh; */
+  color: white;
+}
+
+#reading{
+  /* background-image: url('./components/Images/blur2.webp'); */
+  /* height: 100vh; */
+  color: white;
+}
+
+.book-size{
+  height: 50vh;
+  width: 35vh;
+}
+
+#watching{
+  /* background-image: url('./components/Images/blur2.webp'); */
+  /* background-color: black; */
+  /* height: 100vh; */
+  color: black;
+}
+
+.section-heading-white{
+  margin-top:00px;
+  margin-bottom:10px;
+  font-family: work-sans;
+}
+
+.section-heading-white:before,
+.section-heading-white:after {
+  background-color: white;
+  content: "";
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  vertical-align: middle;
+  width: 7.5%;
+}
+
+.section-heading-white:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.section-heading-white:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+.display-icons{
+  margin-left: 35%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 30%;
+}
+
+.icon img{
+  width: 75px;
+  height: 75px;
+}
+
+#top-nav{
+  width: 100%;
+  position: fixed;
+  z-index: 9;
+  top: 0px;
 }
