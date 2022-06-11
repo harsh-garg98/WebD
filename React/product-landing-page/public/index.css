@@ -1,0 +1,187 @@
+body{
+    /* background-color: #cda776; */
+    background-color: peachpuff;
+}
+
+#nav{
+    width:100%;
+    height: 50px;
+    /* background-color: #deb887; */
+    background-color: blanchedalmond;
+    margin-bottom: 0px;
+    position: fixed;
+}
+
+.company-name{
+    float: left;
+    display: block;
+    width: 20%;
+    height: calc(100% - 5px);
+    font-size: 32px;
+    padding-left: 30px;
+    padding-top: 5px;
+}
+
+.company-name:link{
+    text-decoration: none;
+    color: black;
+}
+
+.company-name:visited{
+    text-decoration: none;
+    color: black;
+}
+
+.company-name:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.company-name:active{
+    text-decoration: none;
+    color: black;
+}
+
+#search{
+    display: block;
+    width: 30%;
+    float: left;
+    font-size: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 5px;
+    margin-top: 10px;
+    margin-left: 130px;
+    border-radius: 5px;
+}
+
+#search-button{
+    width: 40px;
+    margin-top: 9.5px;
+    height: 30.5px;
+    border-radius: 5px;
+}
+
+.other-links{
+    display: block;
+    width: fit-content;
+    float: right;
+    height: calc(100% - 9px);
+    font-size: 24px;
+    padding-left: 30px;
+    padding-top: 9px;
+    
+}
+
+.other-links:link{
+    text-decoration: none;
+    color: black;
+}
+
+.other-links:visited{
+    text-decoration: none;
+    color: black;
+}
+
+.other-links:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.other-links:active{
+    text-decoration: none;
+    color: black;
+}
+
+#fixed_image{
+    background-image: url('./guitar.jpeg');
+  background-attachment: fixed;
+  /* background-color: #282c34; */
+  min-height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  margin-bottom: 2vh;
+}
+
+#aco-ele-container{
+    display: flex;
+}
+
+#acoustic{
+    width: 50%;
+}
+
+#electric{
+    width: 50%;
+}
+
+
+/* Style the container with a rounded border, grey background and some padding and margin */
+.container {
+    border: 2px solid blanchedalmond;
+    background-color: blanchedalmond;
+    border-radius: 5px;
+    padding: 16px;
+    margin: 16px 0;
+  }
+  
+  /* Clear floats after containers */
+  .container::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* Float images inside the container to the left. Add a right margin, and style the image as a circle */
+  .container img {
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%;
+  }
+  
+  /* Increase the font-size of a span element */
+  .container span {
+    font-size: 20px;
+    margin-right: 15px;
+  }
+  
+.container {
+    text-align: center;
+    width: 90%;
+    margin-left: 4%;
+}
+
+.container img {
+    margin: auto;
+    float: none;
+    display: block;
+}
+
+#nav_bottom{
+    width:100%;
+    height: 50px;
+    /* background-color: #deb887; */
+    background-color: blanchedalmond;
+    margin-top: 70px;
+}
+
+#email{
+    display: block;
+    width: 30%;
+    float: left;
+    font-size: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 5px;
+    border-radius: 5px;
+}
+
+#form{
+    margin-left: 40%;
+}

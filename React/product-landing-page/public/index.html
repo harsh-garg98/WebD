@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+    <link rel="stylesheet" type="text/css" href="./index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+  </head>
+  <header id="header">
+    <nav id="nav">
+      <a href="#" class="company-name">Peach Linkit Guitars</a>
+      <input type="text" id="search" placeholder="Search guitars..."  class="">
+      <button type="submit" id="search-button">
+        <i class="fa fa-search" aria-hidden="true" id="fa-search"></i>
+      </button>
+      <a href="#" class="other-links" style="padding-right: 30px;">Contact Us</a>
+      <a href="#" class="other-links">Shops</a>
+      <a href="#" class="other-links">Brands</a>
+
+    </nav>
+  </header>
+  <body>
+    <div id="fixed_image">
+      <h1>A Red Hot Guitar Journey Awaits!</h1>
+      <h3>Grab your guitar now!</h3>
+    </div>
+
+    <h1 style="text-align: center;">Choose from a wide range of guitars!</h1>
+    <div id="aco-ele-container">
+      <div id="acoustic">
+        <h2 style="text-align: center;">Acoustic Guitars</h2>
+        <img 
+        src="./Accoustic guitar header.jpeg" 
+        alt="Image of acoustic guitars" 
+        style="width: 80%; height: 35vh; margin-left: 10%">
+        <ul style="margin-left: 7%; font-size: 20px;">
+          <li>Taylor Guitars</li>
+          <li>C.F. Martin & Company</li>
+          <li>Fender Guitars</li>
+          <li>Collings Guitars</li>
+          <li>Yamaha Guitars</li>
+        </ul>
+        <p style="margin-left: 10%; font-size: 20px; margin-top: -17px;">...And many more guitars!</p>
+        <iframe style="width: 60%; height: 35vh; margin-left: 20%" src="https://www.youtube.com/embed/20Ov0cDPZy8">
+        </iframe>
+      </div>
+      <div id="electric">
+        <h2 style="text-align: center;">Electric Guitars</h2>
+        <img 
+        src="./electric guitar header copy.png" 
+        alt="Image of acoustic guitars" 
+        style="width: 80%; height: 35vh; margin-left: 10%">
+        <ul style="margin-left: 7%; font-size: 20px;">
+          <li>Gibson Guitars</li>
+          <li>Epiphone Guitars</li>
+          <li>Fender Guitars</li>
+          <li>Ibanez Guitars</li>
+          <li>PRS Guitars</li>
+        </ul>
+        <p style="margin-left: 10%; font-size: 20px; margin-top: -17px;">...And many more guitars!</p>
+        <iframe style="width: 60%; height: 35vh; margin-left: 20%" src="https://www.youtube.com/embed/9IrWyZ0KZuk">
+        </iframe>
+      </div>
+    </div>
+    <h2 style="text-align: center; padding-top: 20px;">Hundreds of Satisfied Customers!</h2>
+    <div class="container">
+      <img src="./bandmember.jpeg" alt="Avatar" style="width:90px">
+      <p><span>Chris Fox.</span> CEO at Mighty Schools.</p>
+      <p>John Doe saved us from a concert disaster.</p>
+    </div>
+    
+    <div class="container">
+      <img src="./avatar_g2.jpeg" alt="Avatar" style="width:90px">
+      <p><span >Rebecca Flex.</span> CEO at Company.</p>
+      <p>No one is better than John Doe at selling guitars.</p>
+    </div>
+
+    <h2 style="text-align: center; padding-top: 20px;">Subscribe to our newsletter for the latest and the best deals on the internet!</h2>
+    <form action="https://www.freecodecamp.com/email-submit" method="get" id="form">
+      <input type="text" id="email" name="email" placeholder="john.doe@email.com">
+    </form>
+  </body>
+  <footer>
+    <nav id="nav_bottom">
+      <a href="#" class="other-links" style="padding-right: 30px;">Contact Us</a>
+      <a href="#" class="other-links">Terms</a>
+      <a href="#" class="other-links">Privacy</a>
+
+    </nav>
+  </footer>
+</html>

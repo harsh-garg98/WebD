@@ -1,0 +1,109 @@
+body{
+    padding: -100% 0 30px 0;
+    margin: -100% 0 30px 0;
+    border: 0;
+    clear: both;
+    /* overflow: hidden; */
+}
+
+.main::before {
+    content: "";
+    width: 1440px;
+    height: 100%;
+    opacity: 01;
+    background-image: url("../jojos.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 1440px 100%;
+    position: absolute;
+    /* filter: sepia(100%) saturate(100%) brightness(100%) hue-rotate(0deg); */
+    filter: grayscale(100%)
+  }
+
+  .main{
+      height: 100%;
+      /* text-align: center; */
+  }
+
+  #title{
+      margin-top: 0px;
+        padding-top: 30px;
+        position: relative;
+        text-align: center;
+        color: white;
+        font-size: 32px;
+        opacity: 1;
+  }
+
+  #form-container{
+      position: relative;
+      width: 750px;
+      margin-left: 320px;
+      background-color: black;
+      height: 600px;
+      overflow-y: scroll;
+      padding: 25px 25px 25px 25px;
+      border-radius: 10px;
+  }
+
+  #form-qa-container{
+      position: inherit;
+  }
+
+  .question{
+      color: white;
+      font-size: 24px;
+      display: block;
+      padding-bottom: 15px;
+  }
+
+  #answer{
+    display: block;
+    font-size: 20px;
+    width: 735px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    /* transition: width 1s;
+    transition-timing-function: ease-in-out; */
+}
+
+  /* #answer:focus{
+      display: block;
+      font-size: 20px;
+      width: 735px;
+      margin-bottom: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border-radius: 5px;
+  } */
+
+  #boy-girl{
+      height: 16px;
+      width: 16px;
+      padding-bottom: 10px;
+  }
+
+  .radio{
+      font-size: 24px;
+      color: white;
+  }
+
+#favourite-jojo{
+    font-size: 24px;
+    width: 740px;
+    margin-bottom: 10px;
+}
+
+#favourite-jobro{
+    font-size: 24px;
+    width: 740px;
+    margin-bottom: 15px;
+}
+
+#submit{
+    font-size: 24px;
+    display: block;
+    margin:auto;
+}
