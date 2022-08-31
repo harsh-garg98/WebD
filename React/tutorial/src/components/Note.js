@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-function Note({ note }) {
-    return (
-        <div>{note}</div>
-    )
+function Note({note, toggleImportance}) {
+  const label = note.important ? 'make not important' : 'make important';
+  return (
+    <div>
+      {note} <button onClick={toggleImportance}>{label}</button>
+    </div>
+  );
 }
 
-export default Note
+export default Note;
