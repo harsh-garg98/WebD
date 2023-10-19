@@ -1,10 +1,37 @@
 GET http://localhost:3001/api/persons
 
 ###
+GET http://localhost:3001/api/persons/652e90dcd6f8d2eae93e7f61
+#Should throw an error
+
+###
+GET http://localhost:3001/api/persons/652e90dcd6f8d2eae
+#Should throw an error
+
+###
 GET http://localhost:3001/info
 
 ###
 DELETE http://localhost:3001/api/persons/652fa430a55fccc0d392c150
+
+###
+PUT http://localhost:3001/api/persons/652e90dcd6f8d2eae93e7f60
+Content-Type: application/json
+
+{
+  "name":"Harshu",
+  "number": "7867080884"
+}
+
+###
+PUT http://localhost:3001/api/persons/652e90dcd6f8d2eae93e7f60
+Content-Type: application/json
+
+{
+  "name":"ab",
+  "number": "7867080884"
+}
+#Should throw an error
 
 ###
 POST http://localhost:3001/api/persons
@@ -13,6 +40,25 @@ Content-Type: application/json
 {
   "name":"Harsh Garg",
   "number": "7867080884"
+}
+#Should throw an error
+
+###
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name":"John Doe",
+  "number": "78-67080884"
+}
+
+###
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name":"Johnny Joestar",
+  "number": "786-7080884"
 }
 
 ###
@@ -23,6 +69,7 @@ Content-Type: application/json
   "name":"",
   "number": "7867080884"
 }
+#Should throw an error
 
 ###
 POST http://localhost:3001/api/persons
@@ -32,6 +79,17 @@ Content-Type: application/json
   "name":"Harsh Garg",
   "number": ""
 }
+#Should throw an error
+
+###
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name":"ab",
+  "number": "15334"
+}
+#Should throw an error
 
 ###
 POST http://localhost:3001/api/persons

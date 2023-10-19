@@ -25,6 +25,9 @@ const errorHandler = (error, request, response, next) => {
   console.log(error.message);
   if (error.name === "CastError") {
     return response.status(400).send({ error: "malformatted id" });
+  } else if (error.name === "ValidationError") {
+    console.log("Validation error");
+    return response.status(400).json(error.name);
   }
   next(error);
 };
@@ -66,8 +69,10 @@ app.use(morgan("tiny"));
 //   response.json(persons);
 // });
 
-app.get("/api/persons", (request, response) => {
-  Person.find({}).then((people) => response.json(people));
+app.get("/api/persons", (request, response, next) => {
+  Person.find({})
+    .then((people) => response.json(people))
+    .catch((error) => next(error));
 });
 
 // app.get("/api/persons/:id", (request, response) => {
@@ -81,8 +86,10 @@ app.get("/api/persons", (request, response) => {
 //   }
 // });
 
-app.get("/api/persons/:id", (request, response) => {
-  Person.findById(request.params.id).then((person) => response.json(person));
+app.get("/api/persons/:id", (request, response, next) => {
+  Person.findById(request.params.id)
+    .then((person) => response.json(person))
+    .catch((error) => next(error));
 });
 
 // app.get("/info", (request, response) => {
@@ -111,7 +118,7 @@ app.delete("/api/persons/:id", (request, response, next) => {
 //   return Math.floor(Math.random() * 10000);
 // };
 
-app.post("/api/persons", (request, response) => {
+app.post("/api/persons", (request, response, next) => {
   const body = request.body;
 
   if (!body.name) {
@@ -131,17 +138,20 @@ app.post("/api/persons", (request, response) => {
     name: body.name,
     number: body.number,
   });
-  person.save().then((savedContact) => response.json(savedContact));
+  person
+    .save()
+    .then((savedContact) => response.json(savedContact))
+    .catch((error) => next(error));
 });
 
 app.put("/api/persons/:id", (request, response, next) => {
-  const body = request.body;
+  const { name, number } = request.body;
 
-  const newPerson = {
-    name: body.name,
-    number: body.number,
-  };
-  Person.findByIdAndUpdate(request.params.id, newPerson, { new: true })
+  Person.findByIdAndUpdate(
+    request.params.id,
+    { name, number },
+    { new: true, runValidators: true, content: "query" }
+  )
     .then((updatedPerson) => response.json(updatedPerson))
     .catch((error) => next(error));
 });

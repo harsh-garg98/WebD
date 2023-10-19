@@ -16,8 +16,22 @@ mongoose
   });
 
 const contactSchema = mongoose.Schema({
-  name: String,
-  number: String,
+  name: {
+    type: String,
+    minLength: 3,
+    required: true,
+  },
+  number: {
+    type: String,
+    minLength: 8,
+    required: true,
+    validate: {
+      validator: function (v) {
+        return /^[0-9]{2,3}-[0-9]{6,}$/.test(v);
+      },
+      message: "Enter valid phone number",
+    },
+  },
 });
 
 contactSchema.set("toJSON", {
