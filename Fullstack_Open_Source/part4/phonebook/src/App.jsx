@@ -43,7 +43,7 @@ const App = () => {
         const duplicateContactId = persons.filter((n) => n.name === newName)[0]
           .id;
         const updatedContact = {
-          id: duplicateContactId,
+          // id: duplicateContactId,
           name: newName,
           number: newNumber,
         };
@@ -69,13 +69,19 @@ const App = () => {
         name: newName,
         number: newNumber,
       };
-      contactServices.create(nameObject).then((returnedContact) => {
-        setPersons(persons.concat(returnedContact));
-        setNewName("");
-        setNewNumber("");
-        setMessage(`${returnedContact.name} has been added to phonebook`);
-        setTimeout(() => setMessage(null), 5000);
-      });
+      contactServices
+        .create(nameObject)
+        .then((returnedContact) => {
+          setPersons(persons.concat(returnedContact));
+          setNewName("");
+          setNewNumber("");
+          setMessage(`${returnedContact.name} has been added to phonebook`);
+          setTimeout(() => setMessage(null), 5000);
+        })
+        .catch((error) => {
+          console.log(error.response.data.error);
+          window.alert(`Error: ${error.response.data.error}`);
+        });
     }
   };
 
